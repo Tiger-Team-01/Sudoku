@@ -1,5 +1,7 @@
 import './App.css'
+import { Input } from '@material-ui/core';
 
+import Sudokuboxes from './Sudokuboxes'
 
 function App() {
   var sudokuarray =  [8, 2, 7, 1, 5, 4, 3, 9, 6,
@@ -23,21 +25,23 @@ function App() {
                     2, 3, 9, 0, 4, 1, 5, 0, 7]
 
     return (
+      <>
+      <h1>Sodoku</h1>
     <div className="App">
+      
       {
         sudokuarray.map((val, index) =>
 
           (val === gayabArray[index]) ?
-            <div key={index} className="inputsselect" onClick={() => {
-              console.log(val)
-            }}></div> :
-            <div key={index} className="inputsselect">{val}</div>
+            <Sudokuboxes key={index} index={index} sudokuarray={sudokuarray}/> :
+            <Input  type="number" key={index} className="inputsselect2" defaultValue={val} ></Input>
         )}
 
         <div className="box">
         </div>
 
     </div>
+    </>
   )
 
 }

@@ -49,12 +49,44 @@ body {
   color: white;
 }
 
-.inputsselect{
+Input[type=number]::-webkit-inner-spin-button, 
+Input[type=number]::-webkit-outer-spin-button 
+{ 
+  -webkit-appearance: none; 
+  margin: 0; 
+  
+}
+Input[type=number]{
+  background: none;
+  outline: none;
+  color: white;
+  text-align: center;
+  line-height: 60px;
+  font-size: 1.8rem;
+}
+.inputsselect1,.inputsselect2{
   display: flex;
   width: 65px;
   height: 65px;
   border: 1px solid white ;
   align-items: center;
   justify-content:center; 
-  font-size: 1.3rem;
+  font-size: 1.8rem;
+}
+
+.bc{
+  background-color: rgba(68, 116, 72, 0.548);
+}
+.cc{
+  background-color: rgba(167, 60, 60, 0.651);
+}
+
+h1{
+  color: white;
+  font-family: serif;
+  font-size: 50px;
+  display: flex;
+  justify-content: center;
+  padding: auto;
+  height: 80px;
 }
