@@ -28,6 +28,14 @@ function App() {
   return (
     <>
       <h1>Sudoku</h1>
+
+      <div className="btn">
+        <h2>Time:&nbsp;
+        <span id="time" className="time">0</span>
+        sec
+        </h2>
+      </div>
+
       <div className="App">
 
         {
@@ -47,4 +55,10 @@ function App() {
 
 
 }
+
+setInterval(()=>{
+
+  document.getElementById('time').innerHTML=parseInt(document.getElementById('time').innerHTML)+1
+},1000)
+
 export default App;
